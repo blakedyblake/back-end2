@@ -10,7 +10,7 @@ module.exports = {
         let {address, price, imageURL} = req.body;
         let newID = baseID;
         baseID++;
-        let newHouse  ={
+        let newHouse  = {
             "id": newID,
             "address": address,
             "price": parseInt(price), //Other wise it will concat the input
@@ -24,8 +24,8 @@ module.exports = {
     },
     deleteHouse : (req,res)=>{
         //
-        //let index = dataBase.findIndex(e => +e.id === +req.params.id)
-        dataBase.splice(req,1)
+        let index = dataBase.findIndex(e => +e.id === +req.params.id)
+        dataBase.splice(index,1)
         res.status(200).send(dataBase)
     },
     updateHouse : (req,res)=>{

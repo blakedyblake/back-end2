@@ -2,7 +2,7 @@ const express = require("express");
 const cors = require("cors");
 const controller = require('./controller')
 
-
+console.log( +"3.99" + +"4")
 const app = express();
 
 app.use(cors())
